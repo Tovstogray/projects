@@ -101,4 +101,58 @@ def convert(seconds):
 
 convert(1234565)
 """
-# 10---------------------------------------------------------------------------------------------------------------------
+# 10--------------------------------------------------------------------------------------------------------------------
+"""
+numbers = input("Type numbers with comma: ")
+ints_as_strings = numbers.split(',')
+ints = map(int, ints_as_strings)
+lst = list(ints)
+tup = tuple(lst)
+print('List: ', lst)
+print('Cortege: ', tup)
+"""
+# 11--------------------------------------------------------------------------------------------------------------------
+"""
+list = [1, 2, 3, 4, 5]
+print(list[0], '', list[-1])
+"""
+# 12--------------------------------------------------------------------------------------------------------------------
+"""
+
+def file_name(name):
+    name_part = name.split('.')
+    if len(name_part) < 2:
+        raise ValueError
+    first, *middle, last = name_part
+    if not last or not first and not middle:
+        raise ValueError('The file has no extension')
+    return name_part[-1]
+
+
+print(file_name('abc.py'))
+print(file_name('abc'))  # ValueError
+print(file_name('.abc'))  # ValueError
+print(file_name('.abc.def'))  #ValueError
+"""
+# 13--------------------------------------------------------------------------------------------------------------------
+"""
+
+def n_stick(n):
+    n1 = n
+    n2 = int(str(n) * 2)
+    n3 = int(str(n) * 3)
+    print(n1 + n2 + n3)
+
+
+n_stick(2)
+"""
+# 14--------------------------------------------------------------------------------------------------------------------
+"""
+list = [1, 2, 3, 4, 5, 6, 7, 237, 8, 9, 10, 11, 12]
+for i in list:
+    if i == 237:
+        break
+    elif i % 2 == 0:
+        print(i)
+"""
+# 15--------------------------------------------------------------------------------------------------------------------
